@@ -1,0 +1,216 @@
+public class App {
+    public static void main(String[] args) throws Exception {
+
+        String texto = "Este es un texto asignado a una variable de tipo String";
+        System.out.println(texto);
+
+        int longitud = texto.length();
+        System.out.println("La longitud del texto es: " + longitud);
+
+        char letra = texto.charAt(0);
+        System.out.println("El caracter almacenado en la posición 0 es: " + letra);
+
+        String recorte = texto.substring(1, 10);
+        System.out.println("El texto recortado es: " + recorte);
+
+        String textoMinuscula = texto.toUpperCase();
+        System.out.println("Texto convertio en minúscula: " + textoMinuscula);
+
+        int indicePalabra = texto.indexOf("un");
+        System.out.println("El índice de la palabra " + " un " + " es:" + indicePalabra);
+
+        String textoReemplazado = texto.replace("un", "reemplazado");
+        System.out.println(textoReemplazado);
+
+        boolean contiene = texto.contains("texto");
+        System.out.println("Tiene la palabra 'texto'? " + contiene);
+
+        String texto2 = "                  Este es un texto con espacios al comienzo";
+        System.out.println(texto2.trim());
+
+
+         // Operadores aritméticos
+
+        int a = 8;
+        int b = 6;
+        int suma = a + b;
+        int resta = a - b;
+        int multi = a * b;
+        System.out.println("Suma: " + suma);
+        System.out.println("Resta: " + resta);
+        System.out.println("Multiplicación: " + multi);
+        // double.
+        double num1 = 12;
+        double num2 = 2;
+        // Para que la división funcione, los valores a dividir se recomiendan valores
+        double dividir = num1 / num2;
+        /*
+         * El resto o módulo de la división nos ayuda a saber si el número es par o
+         * impar.
+         */
+        double resto = num1 % num2;
+        System.out.println("El resultado de la división es: " + dividir);
+        if (resto == 0) {
+            System.out.println("El número es par");
+        } else {
+            System.out.println("El número es impar...");
+        }
+
+        // Operadores de comparación
+        int c = 12;
+        int d = 8;
+
+        boolean esMayor = c > d;
+        boolean esMenor = c < d;
+        boolean esIgual = c == d;
+        System.out.println(esMayor);
+        System.out.println(esMenor);
+        System.out.println(esIgual);
+
+        // OPERADORES LÓGICOS
+        boolean cond1 = true;
+        boolean cond2 = false;
+
+        boolean resultadoAND = cond1 && cond2; // Ambos deben ser TRUE
+        boolean resultadoOR = cond1 || cond2;
+        boolean resultadoNOT = !cond1;
+        System.out.println("El resultado AND es: " + resultadoAND);
+        System.out.println("El resultado OR es: " + resultadoOR);
+        System.out.println("El resultado NOT es: " + resultadoNOT);
+
+        // Esctucturas de control
+
+        // Estructura de control IF
+        int edad = 17;
+
+        if (edad >= 18) {
+            System.out.println("Puedes entrar a la disco...");
+        } else {
+            System.out.println("No tienes edad suficiente para entrar a la disco...");
+        }
+
+                // SWITCH
+        String bebida = "ninguna";
+        switch (bebida) {
+            case "café":
+                System.out.println("Es una bebida muy consumida en todo el mundo, en especial en Colombia.");
+                break;
+            case "mate":
+                System.out.println("Es una bebida deliciosa muy consumida en Argentina por ejemplo");
+                break;
+            case "vino":
+                System.out.println("Es una bebida que contiene alcohol, no deberías manejar");
+                break;
+            case "gaseosa":
+                System.out.println("Es una bebida que contiene mucho azúcar, cuidado!!!");
+                break;
+            default:
+                System.out.println("Parece que solo has cosumido agua, excelente!!!");
+                break;
+        }
+
+
+         // SWITCH
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Bienvenido a la máquina de bebidas!!!");
+        System.out.println("Las bebidas disponibles son:");
+        System.out.println("1 - Café");
+        System.out.println("2 - Mate");
+        System.out.println("3 - Gaseosa");
+        System.out.println("4 - Vino");
+        System.out.println("5 - Agua");
+
+        int opcionBebida = scanner.nextInt();
+
+        switch (opcionBebida) {
+            case 1:
+                System.out.println("Tu bebida es Café");
+                break;
+            case 2:
+                System.out.println("Tu bebida es Mate");
+                break;
+            case 3:
+                System.out.println("Tu bebida es Gaseosa");
+                break;
+            case 4:
+                System.out.println("Tu bebida es Vino");
+                break;
+            case 5:
+                System.out.println("Tu bebida es Agua");
+                break;
+            default:
+                System.out.println("No has elegido ninguna de las opciones anteriores.");
+                break;
+        }
+
+        System.out.println("Disfrute de su bebida");
+        scanner.close();
+
+
+                // FOR
+        for (int i = 0; i <= 3; i++) {
+            for (int j = 0; j <= 3; j++) {
+                System.out.println("El valor de i es: " + i + " El valor de j es: " + j);
+            }
+        }
+
+
+                //WHILE
+        int contador = 0;
+
+        while (contador <= 5) {
+            System.out.println("El valor del contador es: " + contador);
+            contador ++;// La variable contador funciona como una variable de control para que el ciclo no sea infinito
+        }
+
+
+        // DO WHILE
+        int contador = 0;
+
+        do {
+            System.err.println("Esto sucede antes de la condición");
+            contador++;
+        } while (contador <= 5);
+
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("i: " + i);
+            if (i == 5) {
+                continue;
+                break;
+                return;
+            }
+            System.out.println("El valor de i es: " + i);
+        }
+
+
+// Estructuras de datos
+        // Arreglos
+
+        int[] listaNumeros = new int[6];
+        int[] listaNumeros2 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        listaNumeros[0] = 1;
+        listaNumeros[1] = 2;
+        listaNumeros[2] = 3;
+        listaNumeros[3] = 4;
+        listaNumeros[4] = 5;
+        listaNumeros[5] = 100;
+
+        int longitud = listaNumeros.length;
+
+        for (int i = 0; i <= longitud; i++) {
+        System.out.println(listaNumeros[i]);
+        }
+
+        for (int i = 0; i < listaNumeros2.length; i++) {
+            System.out.println("El valor es: " + listaNumeros2[i]);
+        }
+
+        for (int i : listaNumeros2) {
+            System.out.println(i);
+        }
+
+
+
+    }
+}
