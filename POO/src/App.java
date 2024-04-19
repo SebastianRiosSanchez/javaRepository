@@ -9,5 +9,8 @@ public class App {
         System.out.println(nuevoGato.hacerSonido());
         System.out.println(nuevoPerro.hacerSonido());
 
+        System.out.println("Total animales creados: " + Animal.getContadorAnimales());
+        System.out.println("Yo llevo mis animales a la veterinaria: " + Veterinaria.nombreVeterianaria);
+
     }
 }
