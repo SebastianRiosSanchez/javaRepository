@@ -1,0 +1,47 @@
+public class App {
+    public static void main(String[] args) throws Exception {
+
+        Persona persona1 = new Persona("Diana", "Trujillo", 45);
+        persona1.setApellido("Otro apellido");
+        persona1.setNombre("Otro nombre");
+
+        System.out.println(persona1.saludar());
+
+        Persona persona2 = new Persona();
+        persona2.setNombre("Nombre nuevo");
+        persona2.setApellido("Apellido nuevo");
+        persona2.setEdad(100);
+        System.out.println(persona2.saludar());
+        System.out.println("La edad de " + persona2.getNombre() + " es: " + persona2.getEdad());
+
+    }
+}
+
+// persona1.nombre = "Sebastian";
+// persona1.apellido = "Rios";
+// persona1.edad = 30;
+// // Carrera persona 1
+// persona1.carreraPersona = new Carrera();
+// persona1.carreraPersona.nombreCarrera = "Ingeniería de Sistemas";
+// persona1.carreraPersona.duracionCarrera = 10;
+// persona1.carreraPersona.cursando = true;
+// // Carrera persona 2
+// Carrera carreraPersona2 = new Carrera();
+// carreraPersona2.nombreCarrera = "Ingeniería de Sistemas y
+// Telecomunicaciones";
+// carreraPersona2.duracionCarrera = 10;
+// carreraPersona2.cursando = false;
+
+// persona2.nombre = "Aronth";
+// persona2.apellido = "Perez";
+// persona2.edad = 10;
+// // Asignando carrera a la persona 2
+// persona2.carreraPersona = carreraPersona2;
+
+// System.out.println(persona1.saludar());
+// System.out.println(persona2.saludar() + " y estudié " +
+// persona2.carreraPersona.nombreCarrera
+// + " con una duración de " + persona2.carreraPersona.duracionCarrera + "
+// semestres");
+// System.out.println(persona1.enviarSaludo("Andy Malhalla"));
+// System.out.println(persona2.enviarSaludo("Luke Skywalker"));
